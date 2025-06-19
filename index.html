@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My IITB Journey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header with Navigation Bar -->
+    <header>
+        <h1>My Journey at IIT Bombay</h1>
+        <nav>
+            <ul>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#learnings">Learnings</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#interactive">Interactive</a></li>
+                <li><a href="#footer">Footer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Introduction -->
+    <section id="intro">
+        <h2>About Me</h2>
+        <p>Hello! I'm <b>Khushahal Varhat </b>, currently in my third year at IIT Bombay, having successfully completed four enriching semesters.
+
+Over the past two years, my journey in the institute has been a blend of learning, exploration, and active involvement in various activities. I’ve had the opportunity to work with several Institute Bodies (IBs), serving as an organiser and coordinator in major campus events such as Mood Indigo, Techfest, and E-Cell. These experiences have not only enhanced my organizational skills but also allowed me to collaborate with diverse teams and manage high-impact events.
+
+In addition, I’ve contributed as a mentor for initiatives like XLR8 and the RC Plane Competition, helping junior students navigate through technical challenges and develop their interest in robotics and aeromodelling.
+
+When it comes to interests and hobbies, I enjoy exploring new places and immersing myself in different experiences. I’m an avid traveler, always keen on discovering something new. Being health-conscious, I make it a point to include jogging and sprinting in my daily routine. I also love playing cricket — a sport that has always energized and motivated me.</section>
+
+    <!-- Timeline / Milestones -->
+    <section id="timeline">
+        <h2>Timeline / Milestones</h2>
+        <div class="timeline-item">
+            <h3>First Day at IITB</h3>
+            <p>My first day at IIT Bombay was a memorable blend of excitement and curiosity. I arrived on campus a bit earlier than most others, which gave me the rare chance to meet just a handful of students on that very first day — our initial interactions took place in the hostel mess, over casual conversations and shared anticipation of what lay ahead.
+
+The campus had a peaceful, almost magical vibe, amplified by the gentle monsoon rains. With no set plan, I spent the day simply exploring the campus in the rain, taking in the surroundings, observing how people lived, and trying to get a feel for the IITB lifestyle. Everything felt fresh, new, and full of potential.
+
+Unlike many who rush to climb Sameer Hill on day one, I took my time. In fact, I didn’t make it there until after my second-semester end-sem exams — and honestly, that made the view feel even more rewarding.</p>
+            <img src="images/campus1.jpg" alt="Campus" width="400" />
+        </div>
+        <div class="timeline-item">
+            <h3>First Hostel Night</h3>
+            <p>My first night in the hostel was surprisingly peaceful — and a little unusual. Since I had arrived earlier than most of my batchmates, the wing was almost empty. Even my roommate had gone off to visit some relatives, so I had the room all to myself.
+
+At one point during the evening, a few professors came around doing rounds, probably checking in on the freshers. They stepped into my room and asked, "Koi ragging toh nahi hui?"
+I couldn’t help but laugh as I replied, "Abhi tak toh kisi se mila hi nahi!"
+The professors burst out laughing — and so did I. It was one of those light-hearted moments that instantly made me feel a little more at ease in this new environment.
+
+That night, sleeping in an unfamiliar place, I actually went to bed at 11 PM and woke up at 5 AM — without any alarm! It felt surreal. Honestly, I wish I still had that kind of sleep schedule — but now, I’ve gotten way too comfortable in campus life. </p>
+            <img src="images/hostelroom.jpg" alt="Hostel Life" width="400" />
+        </div>
+        <div class="timeline-item">
+            <h3>Techfest & Mood Indigo</h3>
+            <p>For me, Techfest and Mood Indigo weren’t just college events — they were an escape from reality. Amidst the routine cycle of lectures, labs, and long afternoons that often left me drained, these fests brought a refreshing change. They helped me step away from the academic grind and immerse myself in something truly vibrant and energetic.
+
+Whether it was volunteering, coordinating, or just soaking in the atmosphere, every moment felt alive. I got to meet new people, work with diverse teams, and experience the joy of creating something bigger than myself. Most importantly, these fests reminded me that college is not just about academics — it's about living in the moment, growing through interactions, and creating memories that stay long after the fest ends.</p>
+            <img src="images/moodindigo3.jpg" alt="Hostel Life" width="400" />
+            <img src="images/moodindigo4.jpg" alt="Hostel Life" width="400" />
+            <img src="images/moodindigo2.jpg" alt="Hostel Life" width="400" height="200"/>
+        </div>
+    </section>
+
+    <!-- Learnings and Growth -->
+    <section id="learnings">
+        <h2>Learnings and Growth</h2>
+        <p>From Data Structures to Group Projects, the academic rigor at IITB has pushed me to grow. I've developed skills in teamwork, coding, time management, and more.</p>
+        <ul>
+            <li>Credits Completed: 140</li>
+            <li>Clubs Joined: Mood Indigo,Techfest, E-Cell</li>
+            <li>Projects: Machine Learning,Civil Engg. related, Algo Trading</li>
+        </ul>
+    </section>
+
+    <!-- Photo Gallery -->
+    <!-- Photo Gallery -->
+<section id="gallery">
+    <h2>Photo Gallery</h2>
+    <div class="slider-container">
+        <button class="slider-btn left" onclick="prevSlide()">❮</button>
+        <div class="slider" id="slider">
+            <img src="images/trade-day.jpg" alt="Trade Day" />
+            <img src="images/trade-day2.jpg" alt="Trade Day 2" />
+            <img src="images/roadpaint.jpg" alt="Road Paint" />
+            <img src="images/cycle-clean.jpg" alt="Cycle Clean" />
+            <img src="images/labs.jpg" alt="Labs" />
+            <img src="images/techgc.jpg" alt="Tech GC" />
+        </div>
+        <button class="slider-btn right" onclick="nextSlide()">❯</button>
+    </div>
+</section>
+
+    <!-- Interactive Section -->
+   <section id="interactive">
+  <h2>Interactive Q&A Box</h2>
+  <p>Ask me anything about IITB life:</p>
+  <input type="text" id="question" placeholder="e.g. How is hostel life?" style="width: 80%; padding: 8px;">
+  <button id="submitBtn" style="padding: 8px 12px; margin-top: 10px;">Ask</button>
+  <div id="response" style="margin-top: 15px; font-weight: bold;"></div>
+</section>
+
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>Links:
+            <a href="https://www.iitb.ac.in" target="_blank">IIT Bombay</a> |
+            <a href="https://www.cse.iitb.ac.in/" target="_blank">CSE Dept</a>
+        </p>
+        <p>&copy; 2025 My IITB Journey</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
