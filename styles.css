@@ -1,146 +1,323 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* === Base Styles === */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  background-color: #f5f5f5;
-  color: #333;
-  padding: 20px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: white;
+    background-image: url('images/background.jpg'); /* Make sure this filename matches your actual file */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    position: relative;
+    min-height: 100vh;
 }
 
+/* Translucent overlay for better readability */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1); /* Adjust opacity as needed */
+    z-index: -1;
+}
+
+/* === Header & Navigation === */
 header {
-  background-color: #003366;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+    /* position: sticky;
+    top: 0; */
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    padding: 0 0 10px 0;
+    font-size: 2rem;
 }
 
 nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-  margin: 0 15px;
+    padding: 5px 0;
 }
 
 nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
+    color: #ffcc00;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
+/* === Content Sections === */
 section {
-  padding: 30px 20px;
-  margin: 20px 0;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 1000px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
 }
 
 h2 {
-  color: #003366;
-  margin-bottom: 15px;
+    color: #ffcc00;
+    margin-top: 0;
+    border-bottom: 1px solid rgba(255, 204, 0, 0.3);
+    padding-bottom: 10px;
 }
 
-ul li {
-  margin: 5px 0;
+/* === Timeline Items === */
+.timeline-item {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.timeline-item:last-child {
+    border-bottom: none;
+}
+
+/* === Image Styling === */
 img {
-  width: 100%;
-  max-width: 300px;
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
-}
-
-/* Gallery styling */
-.gallery img {
-  width: 150px;
-  height: 100px;
-  object-fit: cover;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #003366;
-  color: #fff;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-  }
-
-  .gallery img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
-  }
+    border-radius: 8px;
+    margin: 15px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: block;
 }
-/* Slider Gallery Styles */
+
+/* === Gallery Slider === */
 .slider-container {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  margin: auto;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
+    max-width: 450px;
+    height:700px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
 .slider {
-  display: flex;
-  transition: transform 0.4s ease-in-out;
-  width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
 .slider img {
-  min-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
+    min-width: 100%;
+    margin: 0;
 }
 
 .slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.7);
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  font-size: 24px;
-  border-radius: 50%;
-  z-index: 10;
-  transition: background-color 0.3s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
 }
 
 .slider-btn:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .slider-btn.left {
-  left: 10px;
+    left: 20px;
 }
 
 .slider-btn.right {
-  right: 10px;
+    right: 20px;
+}
+
+/* === Interactive Q&A === */
+#interactive {
+    text-align: center;
+    padding: 30px;
+}
+
+#question {
+    width: 80%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+
+#submitBtn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#submitBtn:hover {
+    background-color: #ffdd33;
+    transform: translateY(-2px);
+}
+
+#response {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* === Footer === */
+footer {
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffdd33;
+    text-decoration: underline;
+}
+
+/* ===== Image Layout Styles ===== */
+/* Container for side-by-side images */
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap; /* Allows wrapping on small screens */
+}
+
+/* Individual images in the row */
+.image-row img {
+    width: calc(50% - 10px); /* Half width minus gap */
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Centered bottom image */
+.centered-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 500px;
+    width: 80%;
+}
+
+/* ===== Timeline Image Centering ===== */
+.timeline-item img:not(.centered-image) {
+    display: block;
+    margin: 20px auto;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Mobile responsive adjustment */
+@media (max-width: 768px) {
+    .image-row {
+        flex-direction: column;
+    }
+    .image-row img {
+        width: 100%;
+    }
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 0;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    nav ul {
+        gap: 10px;
+    }
+    
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 3px 6px;
+    }
+    
+    section {
+        padding: 15px;
+        margin: 15px;
+    }
+    
+    .slider-container {
+        max-width: 100%;
+        border-radius: 0;
+    }
+    
+    .slider-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+    
+    #question {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .timeline-item img {
+        margin: 10px auto;
+    }
 }
